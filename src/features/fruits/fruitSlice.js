@@ -17,6 +17,8 @@ const fruitSlice = createSlice({
 });
 
 export const selectFruits = (state) => state.fruits;
+// No need to explicitly state as fruitSlice because argument "state" passed here refers to the "state of the whole slice"
+// then state.fruits selectively gives fruits state data to selectFruits
 export const { add, remove } = fruitSlice.actions;
 
 export default fruitSlice.reducer;

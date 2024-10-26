@@ -1,15 +1,16 @@
-import React from 'react';
-import { createRoot } from 'react-dom/client';
-import { Provider } from 'react-redux';
-import { store } from './app/store';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import './index.css';
+import React from "react";
+import { createRoot } from "react-dom/client"; // create a root React element
+import { Provider } from "react-redux"; // connect React with Redux, provide redux store to entire React application
+import { store } from "./app/store"; // import redux store
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import "./index.css";
 
-const container = document.getElementById('root');
-const root = createRoot(container);
+const container = document.getElementById("root");
+const root = createRoot(container); // create a root where whole React application will be rendered inside there
 
 root.render(
+  // render whole React application into the given DOM
   <React.StrictMode>
     <Provider store={store}>
       <App />

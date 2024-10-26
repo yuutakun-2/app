@@ -1,7 +1,7 @@
-// import React from 'react';
-// import logo from './logo.svg';
-// import { Counter } from './features/counter/Counter';
-// import './App.css';
+// import React from "react";
+// import logo from "./logo.svg";
+// import { Counter } from "./features/counter/Counter";
+// import "./App.css";
 
 // function App() {
 //   return (
@@ -58,11 +58,13 @@
 // export default App;
 
 import FruitList from "./features/fruits/FruitList";
+import AddFruit from "./features/fruits/AddFruit";
 
 export default function App() {
   return (
     <div>
       <FruitList />
+      <AddFruit />
     </div>
   );
 }
