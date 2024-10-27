@@ -2,6 +2,7 @@ import React from "react";
 import { createRoot } from "react-dom/client"; // create a root React element
 import { Provider } from "react-redux"; // connect React with Redux, provide redux store to entire React application
 import { store } from "./app/store"; // import redux store
+import { BrowserRouter } from "react-router-dom"; // react router
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "./index.css";
@@ -12,9 +13,11 @@ const root = createRoot(container); // create a root where whole React applicati
 root.render(
   // render whole React application into the given DOM
   <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
+    <BrowserRouter>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
